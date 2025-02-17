@@ -1,0 +1,141 @@
+html, body {
+  height: 100vh;
+  max-height: 100vh;
+
+}
+
+.app-container.dark {
+  background-color: #121212;
+  color: #ffffff;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: white;
+}
+
+.form-container.dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container form div {
+  margin-bottom: 15px;
+}
+
+.form-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555555;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="file"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 22px);
+  margin: 0 auto;
+  transition: border-color 0.3s;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus,
+.form-container input[type="file"]:focus {
+  border-color: #007bff;
+}
+
+.form-container input.input-error {
+  border-color: red;
+}
+
+.form-container button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4c4c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.form-container button:hover {
+  background-color: #cc0000;
+}
+
+.form-container img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+.form-container p {
+  text-align: center;
+  margin-top: 15px;
+  color: #555555;
+}
+
+.form-container p a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.form-container p a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.form-container.dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.form-container.dark input {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.form-container.dark button {
+  background-color: #ff4c4c;
+}
+
+.form-container.dark button:hover {
+  background-color: #cc0000;
+}

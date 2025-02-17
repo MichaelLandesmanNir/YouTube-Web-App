@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/allLayout"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+   >
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="50dp"
+
+        android:layout_height="50dp"
+        android:background="@drawable/home"
+        android:layout_marginRight="50dp"
+        android:text="Home" />
+
+    <ImageButton
+        android:id="@+id/trendingButton"
+        android:layout_width="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/trending"
+
+        />
+
+    <ImageButton
+        android:id="@+id/subscriptionsButton"
+        android:layout_width="50dp"
+        android:background="@drawable/playlist"
+        android:layout_height="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Subscriptions" />
+
+    <ImageButton
+        android:id="@+id/libraryButton"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:background="@drawable/book"
+
+        android:text="Library" />
+</LinearLayout>

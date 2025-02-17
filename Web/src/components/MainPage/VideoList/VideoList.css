@@ -1,0 +1,28 @@
+.video-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto;
+  }
+  
+  .video-item {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .video-item img {
+    width: 120px;
+    height: 90px;
+    margin-right: 10px;
+  }
+  
+  .video-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  

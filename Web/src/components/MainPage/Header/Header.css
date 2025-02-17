@@ -1,0 +1,266 @@
+.header {
+  display: flex;
+  justify-content: space-around; /* Push items to the edges */
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+* {
+  font-family: Roboto, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  max-width: 50%;
+  max-height: 50%;
+  object-fit: contain;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 300px; /* Set a maximum height */
+  object-fit: contain; /* Ensure the aspect ratio is maintained */
+}
+
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+body, .HomePage {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Dark theme styles */
+/* Ensure dark mode styles cascade properly */
+.dark-mode, .dark-mode * {
+  background-color: #333;
+  color: #fff;
+}
+
+.toggle-dark-mode {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f8f8f8; /* Light background for the button to stand out */
+  color: #333; /* Dark text on the button */
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-dark-mode:hover {
+  background-color: #ccc; /* Darker when hovered */
+}
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.flexbox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search input {
+  width: 250px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  transition: width 0.4s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.search input::placeholder {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.search input:focus {
+  width: 350px;
+  background-color: #f0f0f0;
+  border-color: #f91042;
+}
+
+.search input:focus::placeholder {
+  color: #f91042;
+}
+
+.search input:hover {
+  border-color: #f91042;
+}
+
+
+.login-button {
+  align-items: center;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  /* Removed display: inline-block; */
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+  margin-right: 140px; /* Push the login button to the right */
+}
+
+
+@media (min-width: 768px) {
+  .login-button {
+    padding: 19px 32px;
+  }
+}
+
+.login-button:before,
+.login-button:after {
+  border-radius: 80px;
+}
+
+.login-button:before {
+  background-color: rgba(249, 58, 19, .32);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.login-button:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.login-button:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.login-button:active:not(:disabled) {
+  color: #ccc;
+}
+
+.username {
+  font-size: 2em; /* Adjust the size as needed */
+  font-weight: bold; /* Makes the text bold */
+  color: #333; /* Change the color if needed */
+  text-align: center; /* Centers the text */
+  text-transform: uppercase; /* Makes the text uppercase */
+  margin: 20px 0; /* Adds some margin for spacing */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.login-button:active:not(:disabled):after {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.login-button:disabled {
+  cursor: default;
+  opacity: .24;
+}
+
+.create-video-btn {
+  font-size: 0.8rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(242, 25, 86);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  margin-right: 10px;
+}
+
+
+.create-video-btn:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(242, 8, 203, 0.681) 0%, rgba(217, 7, 94, 0.873) 60%, rgba(239, 19, 19, 0.681) 80%);
+}
+
+.youtube-logo {
+  max-width: 150px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+}

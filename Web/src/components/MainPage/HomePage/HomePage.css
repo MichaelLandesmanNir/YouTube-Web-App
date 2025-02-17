@@ -1,0 +1,82 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  flex-shrink: 0; /* Prevent the header from shrinking */
+  background-color: #f8f8f8;
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 80px; /* Adjust based on the header height */
+}
+
+.sidebar {
+  position: fixed;
+  top: 80px; /* Adjust based on the header height */
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 80px); /* Full height minus the header height */
+  flex-shrink: 0; /* Prevent the sidebar from shrinking */
+  background-color: #f8f8f8;
+  z-index: 999;
+  overflow-y: auto; /* Enable vertical scrolling for the sidebar if needed */
+  margin-top: 20px;
+}
+
+.video-list-container {
+  margin-left: 200px; /* Adjust based on the sidebar width */
+  flex-grow: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+footer {
+  flex-shrink: 0;
+  background-color: #070707;
+  padding: 10px;
+  text-align: center;
+}
+
+.dark-mode, .dark-mode * {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Specific dark mode adjustments for header, sidebar, and footer */
+.dark-mode .header, .dark-mode .sidebar, .dark-mode footer {
+  background-color: #333;
+  color: #fff;
+}
+
+.toggle-dark-mode {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #f8f8f8; /* Light background for the button to stand out */
+  color: #333; /* Dark text on the button */
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-dark-mode:hover {
+  background-color: #ccc; /* Darker when hovered */
+}
+
+/* Adjust toggle button for dark mode */
+.dark-mode .toggle-dark-mode {
+  background-color: #555; /* Darker background for the button */
+  color: #fff; /* White text on the button */
+}

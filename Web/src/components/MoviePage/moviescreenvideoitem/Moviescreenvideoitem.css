@@ -1,0 +1,25 @@
+.MS-video-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #000000;
+  border: #000000;
+  border-bottom: #000000;
+  
+  
+}
+
+.MS-video-item img {
+  width: 168px;
+  height: 100px;
+  margin-right: 5px;
+  object-fit: cover;
+}
+
+
+
+.MS-video-info h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #000000;
+}

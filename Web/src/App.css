@@ -1,0 +1,65 @@
+/* Light theme */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.App.light {
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.App.light .form-container {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.App.light .form-container button {
+  background-color: #ff4c4c;
+}
+
+.App.light .form-container button:hover {
+  background-color: #cc0000;
+}
+
+.App.light .App-header {
+  background-color: #282c34;
+  color: white;
+}
+
+.App.light footer {
+  background-color: #282c34;
+  color: white;
+}
+
+/* Dark theme */
+.App.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.App.dark .form-container {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+.App.dark .form-container button {
+  background-color: #ff4c4c;
+}
+
+.App.dark .form-container button:hover {
+  background-color: #cc0000;
+}
+
+.App.dark .App-header {
+  background-color: #1e1e1e;
+}
+
+.App.dark footer {
+  background-color: #1e1e1e;
+  color: white;
+}

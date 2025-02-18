@@ -1,0 +1,254 @@
+/* Base Styles */
+.video-container {
+  padding: 5px;
+  background-color: #f0f0f0;
+  /* Default dark mode background */
+}
+.video-container video::-webkit-media-controls-play-button {
+  display: block !important;
+}
+.video-container2 {
+  width: 100%;
+  max-width: 100%;
+  max-height: 80vh; /* Limit the height to 80% of the viewport height */
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container2 video {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensure the video maintains its aspect ratio */
+}
+
+
+
+
+.h2 {
+  margin-bottom: 10px;
+}
+
+.video-container2 video {
+  width: 100%;
+  height: auto;
+
+}
+
+.video-player {
+  width: 100%;
+}
+
+.details-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.details-item {
+  margin-right: 10px;
+  color: #000000;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  /* Ensure text color is consistent */
+}
+
+/* Theme Specific Styles */
+.dark-mode .video-container {
+  background-color: rgb(0, 0, 0);
+}
+
+.dark-mode .details-item,
+.dark-mode .comment,
+.dark-mode .Btn {
+  color: #000000;
+}
+
+.light-mode .video-container {
+  background-color: #fcfcfc;
+}
+
+.light-mode .details-item,
+.light-mode .comment,
+.light-mode .Btn {
+  color: black;
+}
+
+/* Button Styles */
+.Btn {
+  width: 140px;
+  height: 30px;
+  border-width: 2px;
+  /* Assuming you meant to set the width */
+  border-style: solid;
+  /* Specify the style */
+  border-color: transparent;
+  /* Assuming you want the border invisible initially */
+  border-radius: 15px;
+  margin: 7px 0;
+  background: linear-gradient(to right, #922a2a, #fc6767, #801e1a, #cf1b1b, #d31811, #ff0000);
+  background-size: 400%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-position 1s, transform 0.2s;
+  /* Combined transitions */
+  overflow: hidden;
+}
+
+.Btn:hover,
+.Btn:active {
+  background-position: right;
+}
+
+.Btn:active {
+  transform: scale(0.95);
+}
+
+/* Comment Styles */
+.comments,
+.comment {
+  background-color: #f9f9f9; /* Light background for comments */
+  color: #333; /* Darker text for better readability */
+}
+
+.comment {
+  display: flex;
+  padding: 10px;
+  border: 1px solid #ddd; /* Lighter border */
+  border-radius: 8px; /* Rounded corners */
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.comment .avatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc; /* Neutral avatar background */
+  margin-right: 10px;
+}
+
+.comment .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment .content .author {
+  font-weight: bold; /* Bold author name */
+  margin-bottom: 5px;
+}
+
+.comment .content .text {
+  margin-bottom: 10px; /* Space between text and actions */
+}
+
+.comment .content .actions {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #007bff; /* Blue color for action links */
+}
+
+.comment .content .actions span {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.comment .content .actions span:hover {
+  text-decoration: underline;
+}
+
+/* Edit and Delete Button Styles */
+.edit-btn, .delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-btn {
+  background-color: #4caf50; /* Green color for edit */
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.edit-btn:active {
+  transform: scale(0.95);
+}
+
+.delete-btn {
+  background-color: #f44336; /* Red color for delete */
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+
+
+@media (max-width: 768px) {
+  .video-container {
+    padding: 10px;
+  }
+  .edit-btn, .delete-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .details-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .details-item,
+  .comment-input,
+  
+  .comment {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comment .avatar {
+    margin-bottom: 10px;
+  }
+
+  .comment .content .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comment .content .actions span {
+    margin-bottom: 5px;
+  }
+  .Btn {
+    width: 100%;
+  }
+}

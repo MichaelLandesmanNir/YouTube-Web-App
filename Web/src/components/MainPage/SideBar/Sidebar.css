@@ -1,0 +1,28 @@
+.sidebar {
+    width: 200px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add gap between buttons */
+  }
+  
+  .sidebar-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar-button:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .sidebar-button:focus {
+    outline: none;
+  }
+  
